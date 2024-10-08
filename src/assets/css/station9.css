@@ -1,0 +1,14 @@
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  /* アニメーションを要素に適用 */
+  #animation {
+    opacity: 0;
+    animation: fadeIn 6s ease forwards;
+  }

@@ -1,0 +1,69 @@
+#container {
+    display: grid;
+    /* 左に1列、右に2列 */
+    grid-template-rows: 100px;
+    /* 行の高さは自動 */
+    gap: 10px;
+    /* アイテム間の間隔 */
+}
+
+/* ヘッダーを全幅に */
+header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 3;
+    /* 1列目から2列目にまたがる */
+    background-color: lightblue;
+
+    text-align: center;
+}
+
+/* アイテム1は縦に配置 */
+#container div:nth-child(2) {
+    grid-row: 2 / 5;
+    /* 2行目から4行目まで */
+    grid-column: 1 / 2;
+    /* 1列目 */
+    background-color: lightgreen;
+    padding: 20px;
+    text-align: center;
+}
+
+/* アイテム2, 3, 4は横に並ぶ */
+#container div:nth-child(3) {
+    grid-row: 2 / 3;
+    /* 2行目 */
+    grid-column: 2 / 3;
+    /* 2列目 */
+    background-color: lightpink;
+    padding: 20px;
+    text-align: center;
+}
+
+#container div:nth-child(4) {
+    grid-row: 3 / 4;
+    /* 3行目 */
+    grid-column: 2 / 3;
+    /* 2列目 */
+    background-color: lightyellow;
+    padding: 20px;
+    text-align: center;
+}
+
+#container div:nth-child(5) {
+    grid-row: 4 / 5;
+    /* 4行目 */
+    grid-column: 2 / 3;
+    /* 2列目 */
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
+
+/* フッターも全幅に */
+footer {
+    grid-column: 1 / 3;
+    grid-row: 5 / 6;
+    background-color: lightcoral;
+    padding: 20px;
+    text-align: center;
+}
